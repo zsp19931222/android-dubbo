@@ -1,0 +1,19 @@
+server:
+  port: 8180
+
+spring:
+ application:
+  name: dubbo-provider
+
+dubbo:
+  registry:
+    address: nacos://192.168.0.97:8848/android-dubbo #注册地址
+  application:
+    name: dubbo-provider #应用名
+  protocol:
+    name: dubbo #dubbo协议
+    port: 20880 #协议端口
+  scan:
+    base-packages: com.zsp.service.impl #扫包范围
+  provider:
+    timeout: 30000 #超时时间
