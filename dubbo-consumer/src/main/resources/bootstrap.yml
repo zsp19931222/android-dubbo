@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        namespace: 34be7958-5406-464b-8877-3f7f7124b4e7
+        server-addr: 192.168.0.97:8848
+        file-extension: yml
+  application:
+    name: dubbo-consumer
+  profiles:
+    active: dev
