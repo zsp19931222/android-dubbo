@@ -6,4 +6,6 @@ package com.zsp.service;
  */
 public interface ApiService {
     String getInfo(String s);
+
+    void sendMsg(String s);
 }

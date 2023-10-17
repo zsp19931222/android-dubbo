@@ -23,4 +23,11 @@ public class InfoController {
     public String getInfo(@PathVariable(value = "s") String s) {
         return infoService.getInfo(s);
     }
+
+    @GetMapping("/sendMsg/{s}")
+    public void sendMsg(@PathVariable(value = "s") String s) {
+        infoService.sendMsg(s);
+    }
+
+
 }
