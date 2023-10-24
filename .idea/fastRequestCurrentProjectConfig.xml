@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentProjectConfig">
-    <option name="domain" value="http://localhost:8181/dubbo-consumer" />
+    <option name="domain" value="http://localhost:8180/dubbo-provider" />
     <option name="enableEnv" value="local" />
     <option name="enableProject" value="android-dubbo" />
   </component>
