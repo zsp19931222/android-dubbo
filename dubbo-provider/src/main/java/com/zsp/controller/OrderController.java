@@ -30,10 +30,11 @@ public class OrderController {
      */
     @RequestMapping("/getById")
     public Order getById(@RequestParam("id") Long id) {
-        System.out.println(username);
-        System.out.println(password);
         //根据id查询订单
-        return orderService.getById(id);
+        for (int i = 0; i <100 ; i++) {
+            orderService.getById(id);
+        }
+        return null;
     }
 
     /**

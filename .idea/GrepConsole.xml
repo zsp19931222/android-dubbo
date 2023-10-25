@@ -40,7 +40,23 @@
                 </RunConfigurationRef>
               </key>
               <value>
-                <Pins />
+                <Pins>
+                  <option name="pins">
+                    <list>
+                      <Pin>
+                        <option name="consoleUUID" value="6b764f3e-5414-41d8-8e9d-dbe22dd04091" />
+                        <option name="contentType" value="ConsoleContent" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="caseSensitive" value="true" />
+                            <option name="expression" value="布隆过滤器中没有当前key" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                    </list>
+                  </option>
+                </Pins>
               </value>
             </entry>
           </map>
