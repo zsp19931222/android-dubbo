@@ -126,7 +126,7 @@ public class OrderServiceImpl implements OrderService {
         boolean contains = filter.contains(key);
         if (!contains) {
             // 不存在的情况下，直接返回空对象或抛出异常等处理方式
-            log.info("布隆过滤器中没有当前key：{}", key);
+            log.error("布隆过滤器中没有当前key：{}", key);
             return null;
         }
 

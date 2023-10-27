@@ -15,7 +15,7 @@ public class RBloomFilterUtil {
     public RBloomFilter<String> getBloomFilter(String name) {
 
         RBloomFilter<String> bloomFilter = Redisson.create().getBloomFilter(name);
-        bloomFilter.tryInit(100, 0.01);
+        bloomFilter.tryInit(10, 0.5);
         return bloomFilter;
     }
 }

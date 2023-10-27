@@ -3,12 +3,11 @@ package com.zsp.controller;
 import com.zsp.model.Order;
 import com.zsp.service.OrderService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @description:
@@ -20,27 +19,20 @@ public class OrderController {
     @Resource
     private OrderService orderService;
 
-    @Value("${spring.datasource.username}")
-    private String username;
-
-    @Value("${spring.datasource.password}")
-    private String password;
     /**
      * 根据id查询订单
      */
     @RequestMapping("/getById")
     public Order getById(@RequestParam("id") Long id) {
         //根据id查询订单
-        for (int i = 0; i <100 ; i++) {
-            orderService.getById(id);
-        }
+        orderService.getById(id);
         return null;
     }
 
     /**
      * 创建订单
      */
-    @RequestMapping("/create")
+    @PostMapping("/create")
     public String create(@RequestBody Order order) {
         //创建订单
         orderService.create(order);
